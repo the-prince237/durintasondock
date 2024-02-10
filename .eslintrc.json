@@ -1,3 +1,24 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next", "next/core-web-vitals", "prettier", "plugin:tailwindcss/recommended"],
+  "plugins": ["tailwindcss"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js"],
+      "parser": "@typescript-eslint/parser"
+    }
+  ],
+  "settings": {
+    "tailwindcss": {
+      "whitelist": [
+        "bg-gradientConic1",
+        "drop-shadow-darkToBottomRight01",
+        "flip-horizontal",
+        "flip-vertical",
+        "bg-orange00",
+        "bg-transWhite2",
+        "gradient__text",
+        "gradient__mask"
+      ]
+    }
+  }
 }

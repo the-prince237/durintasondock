@@ -3,27 +3,83 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary1: 'hsl(204,23.8%,95.9%)';
+  --background1: '#0F1624';
+  --accent1: 'hsl(34.9,98.6%,72.9%)';
+  --button: 'hsl(205.1,100%,36.1%)';
+  --background2: 'hsl(232.7,27.3%,23.7%)';
+  --font-family: 'Space Grotesk, sans-serif';
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --primary1: 'hsl(204,23.8%,95.9%)';
+    --background1: '#0F1624';
+    --accent1: 'hsl(34.9,98.6%,72.9%)';
+    --button: 'hsl(205.1,100%,36.1%)';
+    --background2: 'hsl(232.7,27.3%,23.7%)';
   }
 }
 
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--primary1);
+  background: var(--background1);
+  font-family: var(--font-family);
+  font-size: 1.6rem;
+  cursor: default;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: var(--font-family);
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.gradient__text {
+  background: linear-gradient(121.57deg, #ffffff 10%, rgba(255, 255, 255, 0.66) 30.15%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient__mask {
+  margin-left: 21px;
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  width: 100%;
+
+  @media screen and (max-width: 640px) {
+    -webkit-mask-image: none;
+    margin-left: 16px;
+    overflow: visible;
+  }
 }
 
 @layer utilities {
