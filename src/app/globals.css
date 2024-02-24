@@ -34,7 +34,7 @@ html {
 
 body {
   color: var(--primary1);
-  background: var(--background1);
+  background: #0b275e;
   font-family: var(--font-family);
   font-size: 1.6rem;
   cursor: default;

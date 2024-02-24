@@ -6,7 +6,7 @@ import { navLinks, socialLinks } from './data';
 import { NavLink, SocialIcon } from './components';
 
 const Header = () => (
-  <div className='flex grid-cols-[1/1/2/3] flex-row content-center sm:grid-cols-[1/1/2/2]'>
+  <div className='flex w-full flex-row justify-between border-2 border-solid border-white'>
     <div className='flex grid-cols-[1/1/2/3] flex-row content-center sm:grid-cols-[1/1/2/2]'>
       <a style={{ display: 'flex', alignItems: 'center', color: 'white' }} href='#portfolio'>
         <DiCssdeck size='3rem' /> <span>Portfolio</span>
