@@ -68,9 +68,9 @@ export const SecondaryBtn = (props: ButtonTagProps) => (
 export const ButtonBack = ({ alt, form, disabled, front, ...props }: StyledButtonProps) => (
   <div
     className={classNames(
-      'bg-gradient-btn relative m-[0,0,80px] mb-[32px] flex h-[32px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-[50px] text-[14px] font-[600] text-white opacity-[1] duration-500 ease-in-out sm:mb-[64px] sm:h-[48px] sm:w-[184px] sm:text-[16px] md:mb-0 md:h-[64px] md:w-[262px] md:text-[24px]',
+      'relative m-[0,0,80px] mb-[32px] flex h-[32px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-[50px] bg-gradient-btn text-[14px] font-[600] text-white opacity-[1] duration-500 ease-in-out sm:mb-[64px] sm:h-[48px] sm:w-[184px] sm:text-[16px] md:mb-0 md:h-[64px] md:w-[262px] md:text-[24px]',
       {
-        'bg-gradient-btn-alt mb-0 text-[20px] sm:mb-0 sm:h-[52px] sm:w-[150px] sm:text-[20px] md:h-[52px] md:w-[150px]':
+        'mb-0 bg-gradient-btn-alt text-[20px] sm:mb-0 sm:h-[52px] sm:w-[150px] sm:text-[20px] md:h-[52px] md:w-[150px]':
           alt,
       },
       {
